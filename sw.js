@@ -1,5 +1,5 @@
 'use strict';
-const V = '20261121122343-224955';
+const V = '20261121175052-d0122c';
 const APP = 'app/';
 const BASE = new URL('./', self.location.href).href;
 const RUTA_BASE = new URL(BASE).pathname;
