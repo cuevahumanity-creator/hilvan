@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Acceso</title>
+<link rel="icon" href="data:,">
+<style>html,body{height:100%;margin:0;background:#07080a;color:#ecebe4;font:15px/1.4 system-ui,sans-serif}body{display:grid;place-items:center}a{color:#dfff57}</style>
+</head>
+<body>
+<p id="m">Redirigiendo…</p>
+<script>
+(function () {
+var base = 'auto';
+var p = location.pathname;
+if (base === 'auto') { var s = p.split('/'); base = '/' + (s.length > 2 && s[1] ? s[1] + '/' : ''); }
+var resto = p.indexOf(base) === 0 ? p.slice(base.length) : '';
+if (!resto) { document.getElementById('m').innerHTML = 'No encontrado. <a href="' + base + '">Ir al inicio</a>'; return; }
+location.replace(base + '?volver=' + encodeURIComponent(resto + location.search) + location.hash);
+})();
+</script>
+</body>
+</html>
